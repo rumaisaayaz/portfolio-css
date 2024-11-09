@@ -5,9 +5,9 @@ import Link from "next/link";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#000000]  text-black py-6">
+    <footer className="bg-[#000000] text-white py-6">
       <div className="container mx-auto text-center">
-        <div className="flex justify-center items-center space-x-6 mb-4">
+        <div className="flex justify-center items-center space-x-6 mb-4 flex-wrap">
           <Link
             href="https://linkedin.com/in/rumaisa-ayaz-730630301"
             target="_blank"
@@ -21,7 +21,11 @@ const Footer: React.FC = () => {
             />
           </Link>
 
-          <Link className="bg-green-500 h-8 rounded-full" href="https://github.com/rumaisaayaz" target="_blank">
+          <Link
+            className="bg-green-500 h-8 rounded-full"
+            href="https://github.com/rumaisaayaz"
+            target="_blank"
+          >
             <Image
               className="hover:text-gray-400"
               alt="GitHub"
@@ -30,8 +34,6 @@ const Footer: React.FC = () => {
               height="32"
             />
           </Link>
-
-        
 
           <Link href="https://www.npmjs.com/~rumaisa_ayaz" target="_blank">
             <Image

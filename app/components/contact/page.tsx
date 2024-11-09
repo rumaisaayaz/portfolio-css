@@ -6,7 +6,13 @@ import { Button } from "@/ui/button";
 import { Input } from "@/ui/input";
 import { Textarea } from "@/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/ui/card";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/ui/card";
 import {
   EMAIL_JS_SERVICE_ID,
   EMAIL_JS_TEMPLATE_ID,
@@ -67,29 +73,37 @@ export default function ContactForm() {
     <div className="min-h-screen bg-green-600 flex items-center justify-center p-4">
       <Card className="w-full max-w-md bg-green-700 text-white shadow-xl">
         <CardHeader>
-          <CardTitle className="text-2xl font-bold text-center text-black">Contact Us</CardTitle>
+          <CardTitle className="text-2xl font-bold text-center text-black">
+            Contact Us
+          </CardTitle>
         </CardHeader>
         <form ref={formRef} onSubmit={onSubmit}>
           <CardContent className="space-y-4">
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label htmlFor="firstName" className="block text-sm font-medium mb-1">
+                <label
+                  htmlFor="firstName"
+                  className="block text-sm font-medium mb-1"
+                >
                   First Name
                 </label>
                 <Input
                   id="firstName"
-                  name="firstName"  // Added name attribute
+                  name="firstName"
                   placeholder="First Name"
                   className="bg-green-600 border-2 border-white text-white placeholder-green-100 font-medium focus:ring-2 focus:ring-black focus:border-transparent"
                 />
               </div>
               <div>
-                <label htmlFor="lastName" className="block text-sm font-medium mb-1">
+                <label
+                  htmlFor="lastName"
+                  className="block text-sm font-medium mb-1"
+                >
                   Last Name
                 </label>
                 <Input
                   id="lastName"
-                  name="lastName"  // Added name attribute
+                  name="lastName"
                   placeholder="Last Name"
                   className="bg-green-600 border-2 border-white text-white placeholder-green-100 font-medium focus:ring-2 focus:ring-black focus:border-transparent"
                 />
@@ -101,19 +115,22 @@ export default function ContactForm() {
               </label>
               <Input
                 id="email"
-                name="email"  // Added name attribute
+                name="email"
                 type="email"
                 placeholder="john.doe@example.com"
                 className="bg-green-600 border-2 border-white text-white placeholder-green-100 font-medium focus:ring-2 focus:ring-black focus:border-transparent"
               />
             </div>
             <div>
-              <label htmlFor="message" className="block text-sm font-medium mb-1">
+              <label
+                htmlFor="message"
+                className="block text-sm font-medium mb-1"
+              >
                 Message
               </label>
               <Textarea
                 id="message"
-                name="message"  // Added name attribute
+                name="message"
                 placeholder="Your message here..."
                 className="bg-green-600 border-2 border-white text-white placeholder-green-100 font-medium min-h-[120px] focus:ring-2 focus:ring-black focus:border-transparent"
               />
@@ -133,48 +150,3 @@ export default function ContactForm() {
     </div>
   );
 }
-
-
-
-//   return (
-//     <div className="max-w-md mx-auto m-4 p-6  bg-gradient-to-br from-[#000000] to-[#08771a] rounded-lg shadow-lg">
-//       <h2 className="text-3xl font-bold text-white mb-6">Contact Us</h2>
-//       <form ref={formRef} onSubmit={onSubmit} className="space-y-4">
-//         <div className="grid grid-cols-2 gap-4">
-//           <Input
-//             name="firstName"
-//             placeholder="First Name"
-//             required
-//             className="bg-white/10 text-white placeholder-white/70 border-white/20"
-//           />
-//           <Input
-//             name="lastName"
-//             placeholder="Last Name"
-//             required
-//             className="bg-white/10 text-white placeholder-white/60 border-white/20"
-//           />
-//         </div>
-//         <Input
-//           name="email"
-//           type="email"
-//           placeholder="Email"
-//           required
-//           className="bg-white/10 text-white placeholder-white/60 border-white/20"
-//         />
-//         <Textarea
-//           name="message"
-//           placeholder="Your Message"
-//           required
-//           className="bg-white/10 text-white placeholder-white/60 border-white/20 min-h-[100px]"
-//         />
-//         <Button
-//           type="submit"
-//           className="w-full bg-lime-500 hover:bg-yellow-500 text-black font-bold"
-//           disabled={isLoading}
-//         >
-//           {isLoading ? "Sending..." : "Send Message"}
-//         </Button>
-//       </form>
-//     </div>
-//   );
-// }
