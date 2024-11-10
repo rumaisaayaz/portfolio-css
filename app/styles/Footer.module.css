@@ -1,0 +1,53 @@
+/* Custom styles for Footer component */
+.footer {
+    background-color: #000000;
+    color: white;
+    padding: 1.5rem 0;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .socialLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap; /* This ensures the icons wrap on smaller screens */
+  }
+  
+  .icon {
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  .icon:hover {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+  }
+  
+  .githubLink {
+    background-color: #28a745;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 9999px; /* Circular button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footerText {
+    font-size: 0.875rem; /* Equivalent to text-sm in Tailwind */
+    color: rgba(255, 255, 255, 0.6); /* Gray text */
+    margin-top: 1rem;
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 768px) {
+    .socialLinks {
+      flex-direction: column; /* Stack the icons vertically on mobile */
+      gap: 1rem;
+    }
+  }
+  

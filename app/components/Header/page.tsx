@@ -2,6 +2,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import React, { useState } from "react";
+import styles from '../../styles/header.module.css'; // Adjusted import path
+
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,49 +13,45 @@ const Header = () => {
   };
 
   return (
-    <header className="flex justify-between bg-black p-4">
+    <header className={styles.header}>
       {/* Logo */}
-      <div className="m-4">
+      <div className={styles.logo}>
         <Link href="/">
           <Image alt="logo" src={"/images/logo.png"} width="50" height="70" />
         </Link>
       </div>
 
       {/* Navigation for Large Screens */}
-      <nav className="hidden md:flex items-center gap-5 m-4 text-[#ffffff]">
-        <ul className="flex gap-5 text-xl font-semibold">
+      <nav className={styles.navDesktop}>
+        <ul>
           <li>
             <Link
-              className="hover:bg-[#08771a] transform transition-transform duration-300 hover:scale-105 hover:border-b-2 rounded border-lime-500"
               href="/"
-              onClick={handleLinkClick} // Close menu on click
+              onClick={handleLinkClick}
             >
               Home
             </Link>
           </li>
           <li>
             <Link
-              className="hover:bg-[#08771a] hover:border-b-2 rounded border-lime-500"
               href="/components/about"
-              onClick={handleLinkClick} // Close menu on click
+              onClick={handleLinkClick}
             >
               About
             </Link>
           </li>
           <li>
             <Link
-              className="hover:bg-[#08771a] hover:border-b-2 rounded border-lime-500"
               href="/components/projects"
-              onClick={handleLinkClick} // Close menu on click
+              onClick={handleLinkClick}
             >
               Projects
             </Link>
           </li>
           <li>
             <Link
-              className="hover:bg-[#08771a] hover:border-b-2 rounded border-lime-500"
               href="/components/contact"
-              onClick={handleLinkClick} // Close menu on click
+              onClick={handleLinkClick}
             >
               Contact
             </Link>
@@ -62,10 +60,9 @@ const Header = () => {
       </nav>
 
       {/* Hamburger Menu for Small Screens */}
-      <div className="md:hidden flex items-center">
+      <div className={styles.hamburgerButton}>
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="text-white text-3xl"
         >
           {menuOpen ? "X" : "☰"}
         </button>
@@ -73,40 +70,36 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <nav className="absolute top-0 left-0 w-full bg-black p-5 md:hidden">
-          <ul className="flex flex-col gap-5 text-[#ffffff] text-xl font-semibold">
+        <nav className={styles.navMobile}>
+          <ul>
             <li>
               <Link
-                className="hover:bg-[#08771a] transform transition-transform duration-300 hover:scale-105 hover:border-b-2 rounded border-lime-500"
                 href="/"
-                onClick={handleLinkClick} // Close menu on click
+                onClick={handleLinkClick}
               >
                 Home
               </Link>
             </li>
             <li>
               <Link
-                className="hover:bg-[#08771a] hover:border-b-2 rounded border-lime-500"
                 href="/components/about"
-                onClick={handleLinkClick} // Close menu on click
+                onClick={handleLinkClick}
               >
                 About
               </Link>
             </li>
             <li>
               <Link
-                className="hover:bg-[#08771a] hover:border-b-2 rounded border-lime-500"
                 href="/components/projects"
-                onClick={handleLinkClick} // Close menu on click
+                onClick={handleLinkClick}
               >
                 Projects
               </Link>
             </li>
             <li>
               <Link
-                className="hover:bg-[#08771a] hover:border-b-2 rounded border-lime-500"
                 href="/components/contact"
-                onClick={handleLinkClick} // Close menu on click
+                onClick={handleLinkClick}
               >
                 Contact
               </Link>
@@ -116,7 +109,7 @@ const Header = () => {
       )}
 
       {/* Social Icons for Large Screens */}
-      <nav className="hidden md:flex gap-5 m-4 text-gray-700">
+      <nav className={styles.socialIcons}>
         <Link
           className="bg-green-500 h-8 rounded-full"
           href="https://github.com/rumaisaayaz"

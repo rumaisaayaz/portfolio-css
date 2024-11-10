@@ -18,6 +18,8 @@ import {
   EMAIL_JS_TEMPLATE_ID,
   EMAIL_JS_PUBLIC_KEY,
 } from "@/lib/emailKeyConfig";
+import styles from "../../styles/ContactForm.module.css";
+; // Import the custom CSS module
 
 export default function ContactForm() {
   const [isLoading, setIsLoading] = useState(false);
@@ -70,47 +72,39 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="min-h-screen bg-green-600 flex items-center justify-center p-4">
-      <Card className="w-full max-w-md bg-green-700 text-white shadow-xl">
+    <div className={styles.contactFormContainer}>
+      <Card className={styles.card}>
         <CardHeader>
-          <CardTitle className="text-2xl font-bold text-center text-black">
-            Contact Us
-          </CardTitle>
+          <CardTitle className={styles.cardTitle}>Contact Us</CardTitle>
         </CardHeader>
         <form ref={formRef} onSubmit={onSubmit}>
-          <CardContent className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <CardContent className={styles.cardContent}>
+            <div className={styles.inputGroup}>
               <div>
-                <label
-                  htmlFor="firstName"
-                  className="block text-sm font-medium mb-1"
-                >
+                <label htmlFor="firstName" className={styles.inputLabel}>
                   First Name
                 </label>
                 <Input
                   id="firstName"
                   name="firstName"
                   placeholder="First Name"
-                  className="bg-green-600 border-2 border-white text-white placeholder-green-100 font-medium focus:ring-2 focus:ring-black focus:border-transparent"
+                  className={styles.inputField}
                 />
               </div>
               <div>
-                <label
-                  htmlFor="lastName"
-                  className="block text-sm font-medium mb-1"
-                >
+                <label htmlFor="lastName" className={styles.inputLabel}>
                   Last Name
                 </label>
                 <Input
                   id="lastName"
                   name="lastName"
                   placeholder="Last Name"
-                  className="bg-green-600 border-2 border-white text-white placeholder-green-100 font-medium focus:ring-2 focus:ring-black focus:border-transparent"
+                  className={styles.inputField}
                 />
               </div>
             </div>
             <div>
-              <label htmlFor="email" className="block text-sm font-medium mb-1">
+              <label htmlFor="email" className={styles.inputLabel}>
                 Email
               </label>
               <Input
@@ -118,28 +112,25 @@ export default function ContactForm() {
                 name="email"
                 type="email"
                 placeholder="john.doe@example.com"
-                className="bg-green-600 border-2 border-white text-white placeholder-green-100 font-medium focus:ring-2 focus:ring-black focus:border-transparent"
+                className={styles.inputField}
               />
             </div>
             <div>
-              <label
-                htmlFor="message"
-                className="block text-sm font-medium mb-1"
-              >
+              <label htmlFor="message" className={styles.inputLabel}>
                 Message
               </label>
               <Textarea
                 id="message"
                 name="message"
                 placeholder="Your message here..."
-                className="bg-green-600 border-2 border-white text-white placeholder-green-100 font-medium min-h-[120px] focus:ring-2 focus:ring-black focus:border-transparent"
+                className={styles.textareaField}
               />
             </div>
           </CardContent>
           <CardFooter>
             <Button
               type="submit"
-              className="w-full bg-black hover:bg-gray-800 text-white font-bold py-2 text-lg"
+              className={styles.submitButton}
               disabled={isLoading}
             >
               {isLoading ? "Sending..." : "Send Message"}

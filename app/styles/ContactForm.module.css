@@ -1,0 +1,92 @@
+.contactFormContainer {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: #4caf50; /* Tailwind bg-green-600 */
+  }
+  
+  .cardContainer {
+    width: 100%;
+    max-width: 28rem;
+    background-color: #388e3c; /* Tailwind bg-green-700 */
+    color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cardTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+  }
+  
+  .inputField,
+  .textareaField {
+    background-color: #388e3c;
+    border: 2px solid white;
+    color: white;
+    font-weight: medium;
+    padding: 0.5rem;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .inputField:focus,
+  .textareaField:focus {
+    outline: none;
+    border-color: transparent;
+    box-shadow: 0 0 0 2px black; /* Mimic Tailwind ring effect */
+  }
+  
+  .inputField::placeholder,
+  .textareaField::placeholder {
+    color: #a5d6a7; /* Tailwind placeholder-green-100 */
+  }
+  
+  .button {
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem;
+    font-size: 1.125rem;
+  }
+  
+  .button:hover {
+    background-color: #424242; /* Tailwind hover:bg-gray-800 */
+  }
+  
+  /* Optional: Style for grid layout of form fields */
+  .gridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  .gridItem {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+  }
+  
+  
+  /* For tablets or larger screens */
+@media (max-width: 1024px) {
+    .cardGrid {
+      grid-template-columns: repeat(2, 1fr); /* 2 items per row on tablets */
+    }
+  }
+  
+  /* For mobile devices */
+  @media (max-width: 768px) {
+    .cardGrid {
+      grid-template-columns: 1fr; /* 1 item per row on mobile */
+    }
+  }

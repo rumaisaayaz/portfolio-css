@@ -1,0 +1,109 @@
+/* About.module.css */
+
+/* Wrapper for the entire component */
+.about-container {
+    min-height: 100vh;
+    background-color: #16a34a; /* Green-600 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem; /* p-4 */
+  }
+  
+  /* Card Styling */
+  .card {
+    width: 100%;
+    max-width: 50rem; /* max-w-4xl */
+    background-color: #000000; /* bg-black */
+    color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    border: 2px solid #16a34a; /* border-green-500 */
+  }
+  
+  .card-header {
+    background-color: #15803d; /* bg-green-700 */
+    padding: 1rem;
+  }
+  
+  .card-title {
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* Card content section */
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.5rem;
+  }
+  
+  .card-content .image-container {
+    width: 12rem; /* w-48 */
+    height: 12rem; /* h-48 */
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #16a34a; /* border-green-500 */
+    flex-shrink: 0;
+  }
+  
+  .card-content .text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .card-content .text-container .mission-title {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: bold;
+    color: #34d399; /* text-green-400 */
+  }
+  
+  .card-content .text-container p {
+    font-size: 1.125rem; /* text-lg */
+  }
+  
+  .card-content .skills-list,
+  .card-content .values-list {
+    background-color: #165e36; /* bg-green-800 */
+    padding: 1.5rem;
+    border-radius: 0.5rem; /* rounded-lg */
+  }
+  
+  .card-content .skills-list .title,
+  .card-content .values-list .title {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: bold;
+    color: black;
+  }
+  
+  .card-content ul {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .card-content ul li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .card-content .approach {
+    background-color: #15803d; /* bg-green-700 */
+    padding: 1.5rem;
+    border-radius: 0.5rem; /* rounded-lg */
+  }
+  
+  .card-content .approach h3 {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: black;
+  }
+  
+  .card-content .approach p {
+    font-size: 1.125rem; /* text-lg */
+  }
+  

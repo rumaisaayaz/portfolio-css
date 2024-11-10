@@ -1,131 +1,141 @@
 import React from "react";
 import Link from "next/link";
-
+import styles from "../../styles/Projects.module.css"; // Adjust the import path if needed
 const Projects = () => {
   return (
-    <div>
-      <div className="flex justify-center text-3xl p-5 font-bold text-white bg-black">
+    <div className={styles.container}>
+      <div className={styles.header}>
         <h1>Projects</h1>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 bg-gradient-to-br from-lime-400 to-green-700">
-        <div className="card transform transition-transform duration-300 hover:scale-105 shadow-stone-950 text-black bg-gradient-to-br from-[#30aa44] to-[#08771a] w-[20rem] m-4 h-[30rem] shadow-xl glow-card">
+      <div className={styles.cardGrid}>
+        {/* Card 1 */}
+        <div className={styles.card}>
           <figure>
             <img src="/images/builder.png" alt="Resume-Builder-Pic" />
           </figure>
-          <div className="card-body">
-            <h2 className="card-title">Resume Builder</h2>
-            <p>
+          <div className={styles.cardBody}>
+            <h2 className={styles.cardTitle}>Resume Builder</h2>
+            <p className="para">
               A sleek and user-friendly resume builder featuring a modern UI.
               Built with TypeScript, HTML, and CSS, it streamlines creating
               professional resumes with ease and style.
             </p>
-            <div className="card-actions justify-end">
-              <button className="btn bg-black text-white btn-primary border-black hover:bg-lime-400 hover:text-black">
+            <div className={styles.cardActions}>
                 <Link href="https://resume-builder-alpha-dun.vercel.app/">
+              <button className={styles.button}>
                   Visit
-                </Link>
               </button>
+                </Link>
             </div>
           </div>
         </div>
 
-        <div className="card transform transition-transform duration-300 hover:scale-105 shadow-stone-950 w-[20rem] text-black bg-gradient-to-br from-[#30aa44] to-[#08771a] m-4 h-[30rem] shadow-xl">
+        {/* Card 2 */}
+        <div className={styles.card}>
           <figure>
             <img src="/images/myresume.png" alt="Resume-Pic" />
           </figure>
-          <div className="card-body">
-            <h2 className="card-title">Static Resume</h2>
-            <p>
+          <div className={styles.cardBody}>
+            <h2 className={styles.cardTitle}>Static Resume</h2>
+            <p className="para">
               A clean, static resume template showcasing essential sections like
               skills, experience, and education. Built with HTML, CSS, and
               TypeScript for a structured layout.
             </p>
-            <div className="card-actions justify-end">
-              <button className="btn bg-black text-white btn-primary border-black hover:bg-lime-400 hover:text-black">
-                <Link href="https://static-resume-fawn.vercel.app/">Visit</Link>
+            <div className={styles.cardActions}>
+                <Link href="https://static-resume-fawn.vercel.app/">
+              <button className={styles.button}>
+              Visit
               </button>
+                </Link>
             </div>
           </div>
         </div>
 
-        <div className="card transform transition-transform duration-300 hover:scale-105 shadow-stone-950 w-[20rem] text-black bg-gradient-to-br from-[#30aa44] to-[#08771a] m-4 h-[30rem] shadow-xl">
+        {/* Card 3 */}
+        <div className={styles.card}>
           <figure>
             <img src="/images/calculator.png" alt="Calculator-Pic" />
           </figure>
-          <div className="card-body">
-            <h2 className="card-title">Calculator</h2>
-            <p>
+          <div className={styles.cardBody}>
+            <h2 className={styles.cardTitle}>Calculator</h2>
+            <p className="para">
               A basic yet effective calculator to handle standard arithmetic
               operations. This project is crafted using HTML, CSS, and
               TypeScript for simplicity and precision.
             </p>
-            <div className="card-actions justify-end">
-              <button className="btn bg-black text-white btn-primary border-black hover:bg-lime-400 hover:text-black">
-                <Link href="https://calculator-web-based.vercel.app/">
-                  Visit
-                </Link>
+            <div className={styles.cardActions}>
+                <Link href="https://calculator-web-based.vercel.app/">  
+              <button className={styles.button}>
+              Visit
               </button>
+                </Link>
             </div>
           </div>
         </div>
 
-        <div className="card transform transition-transform duration-300 hover:scale-105 shadow-stone-950 w-[20rem] text-black bg-gradient-to-br from-[#30aa44] to-[#08771a] m-4 h-[30rem] shadow-xl">
+        {/* Card 4 */}
+        <div className={styles.card}>
           <figure>
             <img src="/images/currency.png" alt="Currancy-Convertor-pic" />
           </figure>
-          <div className="card-body">
-            <h2 className="card-title">Currency Convertor</h2>
-            <p>
+          <div className={styles.cardBody}>
+            <h2 className={styles.cardTitle}>Currency Convertor</h2>
+            <p className="para">
               A responsive currency converter app for accurate exchange rate
               calculations. Built with TypeScript, HTML, and CSS, it simplifies
               foreign currency conversions.
             </p>
-            <div className="card-actions justify-end">
-              <button className="btn bg-black text-white btn-primary border-black hover:bg-lime-400 hover:text-black">
+            <div className={styles.cardActions}>
                 <Link href="https://github.com/rumaisaayaz/Currency-Converterr.git/">
-                  Visit
-                </Link>
+              <button className={styles.button}>
+              Visit
               </button>
+                </Link>
             </div>
           </div>
         </div>
 
-        <div className="card transform transition-transform duration-300 hover:scale-105 shadow-stone-950 w-[20rem] text-black bg-gradient-to-br from-[#30aa44] to-[#08771a] m-4 h-[30rem] shadow-xl">
+        {/* Card 5 */}
+        <div className={styles.card}>
           <figure>
             <img src="/images/todo.avif" alt="todo-app" />
           </figure>
-          <div className="card-body">
-            <h2 className="card-title">ToDo App</h2>
-            <p>
+          <div className={styles.cardBody}>
+            <h2 className={styles.cardTitle}>ToDo App</h2>
+            <p className="para">
               A user-friendly ToDo app for task management and productivity.
               Developed with TypeScript, HTML, and CSS, it enables adding,
               editing, and deleting tasks efficiently.
             </p>
-            <div className="card-actions justify-end">
-              <button className="btn bg-black text-white btn-primary border-black hover:bg-lime-400 hover:text-black">
-                <Link href="https://github.com/rumaisaayaz/-To-do-App.git">
-                  Visit
-                </Link>
+            <div className={styles.cardActions}>
+                <Link href="https://github.com/rumaisaayaz/-To-do-App.git"> 
+              <button className={styles.button}>
+              Visit
               </button>
+                </Link>
             </div>
           </div>
         </div>
 
-        <div className="card transform transition-transform duration-300 hover:scale-105 shadow-stone-950 w-[20rem] text-black bg-gradient-to-br from-[#30aa44] to-[#08771a] m-4 h-[30rem] shadow-xl">
+        {/* Card 6 */}
+        <div className={styles.card}>
           <figure>
-            <img src="/images/atmmachine2.png" alt="Shoes" />
+            <img src="/images/atmmachine2.png" alt="ATM Machine" />
           </figure>
-          <div className="card-body">
-            <h2 className="card-title">ATM Machine</h2>
-            <p>
+          <div className={styles.cardBody}>
+            <h2 className={styles.cardTitle}>ATM Machine</h2>
+            <p className="para">
               An interactive ATM machine simulation offering withdrawal,
               deposit, and balance check functionalities. Created with
               TypeScript, HTML, and CSS for a realistic experience.
             </p>
-            <div className="card-actions justify-end">
-              <button className="btn bg-black text-white btn-primary border-black hover:bg-lime-400 hover:text-black">
-                <Link href="https://github.com/rumaisaayaz/ATM.git">Visit</Link>
+            <div className={styles.cardActions}>
+                <Link href="https://github.com/rumaisaayaz/ATM.git">
+              <button className={styles.button}>
+              Visit
               </button>
+                </Link>
             </div>
           </div>
         </div>

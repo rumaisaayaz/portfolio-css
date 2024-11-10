@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { Card, CardHeader, CardTitle, CardContent } from "@/ui/card";
 import { CheckCircle } from "lucide-react";
+import styles from "../../styles/About.module.css";
+ // Import the custom CSS file
 
 export default function AboutComponent() {
   const skills = [
@@ -23,16 +25,16 @@ export default function AboutComponent() {
   ];
 
   return (
-    <div className="min-h-screen bg-green-600 flex items-center justify-center p-4">
-      <Card className="w-full max-w-4xl bg-black text-white shadow-xl border-2 border-green-500">
-        <CardHeader className="bg-green-700">
-          <CardTitle className="text-3xl font-bold text-center">
+    <div className={styles["about-container"]}>
+      <Card className={styles.card}>
+        <CardHeader className={styles["card-header"]}>
+          <CardTitle className={styles["card-title"]}>
             About Me
           </CardTitle>
         </CardHeader>
-        <CardContent className="space-y-8 p-6">
+        <CardContent className={styles["card-content"]}>
           <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
-            <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-green-500 flex-shrink-0">
+            <div className={styles["image-container"]}>
               <Image
                 src="/images/pfp.png"
                 alt="Your Name"
@@ -41,17 +43,17 @@ export default function AboutComponent() {
                 className="object-cover w-full h-full"
               />
             </div>
-            <div className="space-y-4 text-center md:text-left">
-              <h3 className="text-2xl font-bold text-green-400">My Mission</h3>
-              <p className="text-lg">
+            <div className={styles["text-container"]}>
+              <h3 className="mission-title">My Mission</h3>
+              <p>
                 To create innovative and user-friendly web applications that
                 solve real-world problems, while continuously expanding my
                 skills and contributing to the developer community.
               </p>
             </div>
           </div>
-          <div className="space-y-4 bg-green-800 p-6 rounded-lg">
-            <h3 className="text-2xl font-bold text-black">My Skills</h3>
+          <div className={styles["skills-list"]}>
+            <h3 className="title">My Skills</h3>
             <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
               {skills.map((skill, index) => (
                 <li key={index} className="flex items-center space-x-2">
@@ -61,8 +63,8 @@ export default function AboutComponent() {
               ))}
             </ul>
           </div>
-          <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-green-400">My Values</h3>
+          <div className={styles["values-list"]}>
+            <h3 className="title">My Values</h3>
             <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {values.map((value, index) => (
                 <li key={index} className="flex items-center space-x-2">
@@ -72,7 +74,7 @@ export default function AboutComponent() {
               ))}
             </ul>
           </div>
-          <div className="bg-green-700 p-6 rounded-lg">
+          <div className={styles["approach"]}>
             <h3 className="text-2xl font-bold mb-4 text-black">My Approach</h3>
             <p className="text-lg">
               I believe in crafting clean, efficient, and scalable code that not

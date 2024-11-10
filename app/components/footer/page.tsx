@@ -1,51 +1,26 @@
-// components/Footer.tsx
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
+import styles from "../../styles/Footer.module.css"; // Import the custom CSS module
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#000000] text-white py-6">
-      <div className="container mx-auto text-center">
-        <div className="flex justify-center items-center space-x-6 mb-4 flex-wrap">
-          <Link
-            href="https://linkedin.com/in/rumaisa-ayaz-730630301"
-            target="_blank"
-          >
-            <Image
-              className="hover:text-gray-400"
-              alt="Linkedin"
-              src="/icons/linkedin.png"
-              width="32"
-              height="32"
-            />
+    <footer className={styles.footer}>
+      <div className={styles.container}>
+        <div className={styles.socialLinks}>
+          <Link href="https://linkedin.com/in/rumaisa-ayaz-730630301" target="_blank">
+            <Image className={styles.icon} alt="Linkedin" src="/icons/linkedin.png" width="32" height="32" />
           </Link>
 
-          <Link
-            className="bg-green-500 h-8 rounded-full"
-            href="https://github.com/rumaisaayaz"
-            target="_blank"
-          >
-            <Image
-              className="hover:text-gray-400"
-              alt="GitHub"
-              src="/icons/github.png"
-              width="32"
-              height="32"
-            />
+          <Link className={styles.githubLink} href="https://github.com/rumaisaayaz" target="_blank">
+            <Image className={styles.icon} alt="GitHub" src="/icons/github.png" width="32" height="32" />
           </Link>
 
           <Link href="https://www.npmjs.com/~rumaisa_ayaz" target="_blank">
-            <Image
-              className="hover:text-gray-400"
-              alt="NPM"
-              src="/icons/npm.png"
-              width="32"
-              height="32"
-            />
+            <Image className={styles.icon} alt="NPM" src="/icons/npm.png" width="32" height="32" />
           </Link>
         </div>
-        <p className="text-sm text-gray-400">
+        <p className={styles.footerText}>
           © {new Date().getFullYear()} Rumaisa Ayaz. All rights reserved.
         </p>
       </div>

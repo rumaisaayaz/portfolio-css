@@ -1,0 +1,86 @@
+/* Custom CSS for Projects component */
+
+.container {
+    padding: 2rem;
+  }
+
+  
+  .header {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    padding: 1rem;
+  }
+  
+  .cardGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem; 
+    background-color: #044b15;
+  }
+  
+  .card {
+    background-color: #28a745; 
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    color:#000000
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .cardBody {
+    padding: 1rem;
+    
+  }
+  
+  .cardTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+  }
+ 
+  
+  .cardActions {
+    margin-top: 1rem;
+  }
+  
+  .button {
+    background-color: #000000;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: limegreen;
+  }
+  /* For tablets or larger screens */
+@media (max-width: 1024px) {
+    .cardGrid {
+      grid-template-columns: repeat(2, 1fr); /* 2 items per row on tablets */
+    }
+  }
+  
+  /* For mobile devices */
+  @media (max-width: 768px) {
+    .cardGrid {
+      grid-template-columns: 1fr; /* 1 item per row on mobile */
+    }
+  }
